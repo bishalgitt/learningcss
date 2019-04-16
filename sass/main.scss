@@ -1,0 +1,140 @@
+/* dark blue:#000066
+    medium blue:#3333cc
+    light blue:#3333cc
+
+*/
+$color-primary: rgb(51,73,255);
+$color-primary-light: rgb(123,121,145);
+$color-primary-dark:rgb(168,163,216);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+
+
+}
+.header{
+  height: 95vh;
+  background-image: linear-gradient(to right bottom,
+                    rgba($color-primary-light,0.8),
+                    rgba($color-primary-dark,0.8)),
+                    url('../images/books.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0 , 100% 0, 100% 75vh, 0 100%);
+
+
+}
+.header__logo-box{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+}
+.header__logo{
+  height: 70px;
+}
+
+.header__text-box{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform:translate(-50% -50%);
+  text-align: center;
+
+}
+.heading-primary{
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+
+}
+.heading-primary--main{
+  display: block;
+  font-size:60px;
+  font-weight: 400;
+  letter-spacing: 36px;
+
+  animation-name: moveinright;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+
+}
+.heading-primary--sub{
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing:12px;
+  animation-name: moveinleft;
+  animation-duration: 3s;
+
+  animation-timing-function: ease-out;
+
+}
+@keyframes moveinright{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px) rotate(180deg);
+
+  }
+  60{
+    transform: translateX(-50);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0) rotate(360deg)
+  }
+}
+  @keyframes moveinleft{
+    0%{
+      opacity: 0;
+      transform: translateX(100px) rotate(-180deg);
+
+    }
+    100%{
+      opacity: 1;
+      transform: rotate(-360deg);
+    }
+  }
+  .btn:link,
+  .btn:visited {
+    text-transform : uppercase;
+    text-decoration: none;
+    letter-spacing: 3.5px;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all.2s;
+
+  }
+  .btn:hover{
+    transform: translateY(-3px);
+  }
+  .btn-active{
+    transform:translateY(-1px);
+  }
+.btn--white{
+  background: white;
+  color: blue;
+}
+.btn::after{
+  content: "";
+  display: inline-block;
+  height:100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1
+}
