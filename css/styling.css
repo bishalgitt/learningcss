@@ -9,7 +9,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: Lato;
+  font-family: lato;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -23,45 +23,39 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 20px;
-  left: 20px; }
-
-.header__logo {
-  height: 70px; }
-
-.header__text-box {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  transform: translate(-50% -50%);
-  text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 60px; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 36px;
-  animation-name: moveinright;
-  animation-duration: 3s;
-  animation-timing-function: ease-in; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 12px;
-  animation-name: moveinleft;
-  animation-duration: 3s;
-  animation-timing-function: ease-out; }
+  .header__logo-box {
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+  .header__logo {
+    height: 70px; }
+  .header__text-box {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50% -50%);
+    text-align: center; }
+  .header .heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px; }
+    .header .heading-primary--main {
+      display: block;
+      font-size: 60px;
+      font-weight: 400;
+      letter-spacing: 36px;
+      animation-name: moveinright;
+      animation-duration: 3s;
+      animation-timing-function: ease-in; }
+    .header .heading-primary--sub {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      animation-name: moveinleft;
+      animation-duration: 3s;
+      animation-timing-function: ease-out; }
 
 @keyframes moveinright {
   0% {
@@ -80,34 +74,39 @@ body {
   100% {
     opacity: 1;
     transform: rotate(-360deg); } }
+  .header:link, .header:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3.5px;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s; }
+  .header:hover {
+    transform: translateY(-3px); }
+  .header-active {
+    transform: translateY(-1px); }
+  .header--white {
+    background: white;
+    color: blue; }
+  .header::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
+.btn {
+  width: 50px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: white;
+  color: darkgray;
+  margin: auto;
   text-decoration: none;
-  letter-spacing: 3.5px;
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s; }
-
-.btn:hover {
-  transform: translateY(-3px); }
-
-.btn-active {
-  transform: translateY(-1px); }
-
-.btn--white {
-  background: white;
-  color: blue; }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; }
+  padding: 15px;
+  font-size: 1.5rem; }
