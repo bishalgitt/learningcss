@@ -33,7 +33,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #fff;
+  color: #1D5;
   padding: 30px; }
 
 .heading-primary {
@@ -141,3 +141,8 @@ body {
     left: 20%;
     transform: translate(-50% -50%);
     text-align: center; }
+
+.row {
+  width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 8rem; }
