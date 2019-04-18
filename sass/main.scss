@@ -1,13 +1,25 @@
 /* dark blue:#000066
     medium blue:#3333cc
     light blue:#3333cc
-
 */
+@import "base/base";
+@import "base/animation";
+@import "base/typography";
+@import "base/utility";
+
+@import "abstract/mixins";
+@import "abstract/functions";
+@import "abstract/variables";
+@import "pages/home"; 
 $color-primary: rgb(51,73,255);
 $color-primary-light: rgb(123,121,145);
 $color-primary-dark:rgb(168,163,216);
 $color-white:#fff;
 $color-grey-dark:#777;
+$color-grey-light-1:#f7f7f7;
+html{
+  font-size: 62.5%;
+}
 *{
   margin: 0;
   padding: 0;
@@ -156,3 +168,15 @@ body{
     padding:15px;
     font-size:1.5rem;
   }
+.section-about{
+  background: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -25vh;
+}
+.heading-secondary{
+  font-size: 3rem;
+  font-weight: 750;
+  color: yellowgreen;
+  text-transform: uppercase;
+  background-image: lin
+}
