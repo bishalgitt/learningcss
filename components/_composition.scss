@@ -1,0 +1,30 @@
+.composition{
+  position: relative;
+
+  &__photo{
+    width: 55%;
+    box-shadow: 0rem 4rem 2rem rgba($color-grey-dark,0.5);
+    position: absolute;
+    border-radius:2px;
+    cursor: pointer;
+    transition: all .4s;
+
+    &--p1{
+      left: 0;
+      top: -2.5rem;
+    }
+    &--p2{
+      left: 35%;
+      top: 0.6rem;
+    }
+    &--p3{
+      left: 8%;
+      top: 10rem;
+    }
+    &:hover{
+      transform: scale(1.250);
+      border: .5rem solid navajowhite;
+      z-index:3;
+    }
+  }
+}
